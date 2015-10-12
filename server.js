@@ -1,4 +1,4 @@
-// Simplest express HTTP server
+// Simplest express HTTP server for development
 var express      = require('express'),
     app          = express(),
     server       = require('http').createServer(app);

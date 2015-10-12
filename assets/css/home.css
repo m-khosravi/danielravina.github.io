@@ -27,7 +27,7 @@
   position: relative;
   border-bottom-width: 2px;
   border:1px solid #BFBFBF;
-  height: 280px;
+  height: 270px;
 }
 
 .projectTile header {
@@ -50,12 +50,12 @@
   width:100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: 185%;
   position: absolute;
   left: 0; top:0; bottom:0; right:0;
   z-index: -1;
-  -webkit-filter: sepia(.9) brightness(70%);
-  filter: sepia(.9) brightness(70%);
+  -webkit-filter: brightness(60%);
+  filter: brightness(60%);
 }
 
 .projectTile:hover .thumb {
@@ -64,6 +64,7 @@
 }
 
 .projectTile footer {
+
   position: absolute;
   bottom: 0; left:0; right:0;
   height: 100px;
@@ -73,9 +74,13 @@
   align-items: center;
 }
 
+
 .projectTile footer p {
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  -webkit-transition: color .3s ease;
   color:white;
-  font-weight: normal;
+  font-weight: bold;
+  font-style: 18px;
 }
 
 ul.tags {
@@ -107,7 +112,7 @@ ul.tags li.bright {
 }
 
 .lastColumn {
-  border: 2px dashed #222;
+  border: 1px dashed #222;
   padding: 15px;
 }
 

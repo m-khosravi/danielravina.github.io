@@ -28859,7 +28859,7 @@
 	  render: function() {
 	    return (
 	      React.createElement("div", {className: "projectTile"}, 
-	        React.createElement("div", {className: "thumb", style: {backgroundImage: "url(assets/images/projects/burrardPlace/burrardplace.png)"}}), 
+	        React.createElement("div", {className: "thumb", style: {backgroundImage: "url("+ this.props.data.thumb_img +")"}}), 
 	        React.createElement("footer", null, 
 	          React.createElement("p", null, this.props.data.name)
 	        )
@@ -29049,7 +29049,7 @@
 	      "1": "small-12",
 	      "2": "small-6",
 	      "3": "small-4",
-	      "4": "small-12 medium-3",
+	      "4": "small-12 medium-3", // todo
 	      "6": "small-2",
 	      "12": "small-1"
 	    }[this.props.columns]

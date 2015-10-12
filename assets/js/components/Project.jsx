@@ -6,7 +6,7 @@ var Project = React.createClass({
   render: function() {
     return (
       <div className={"projectTile"}>
-        <div className={"thumb"} style={{backgroundImage: "url(assets/images/projects/burrardPlace/burrardplace.png)"}} />
+        <div className={"thumb"} style={{backgroundImage: "url("+ this.props.data.thumb_img +")"}} />
         <footer>
           <p>{this.props.data.name}</p>
         </footer>

@@ -21,7 +21,8 @@
         ],
         "link": "https://solo.bcldb.com",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/solo.jpg",
+        "images":[]
     },
     {
         "name": "Honestly Healthy",
@@ -41,7 +42,8 @@
         ],
         "link": "http://www.honestlyhealthyfood.com/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/hh.jpg",
+        "images":[]
     },
     {
         "name": "Squamish Festival 2015",
@@ -58,7 +60,8 @@
         ],
         "link": "http://squamishfestival.com/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/squamish.jpg",
+        "images":[]
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Donor Recognition Wall",
@@ -75,7 +78,8 @@
         ],
         "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/donor.gif",
+        "images":[]
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Lobby Interactive Wall",
@@ -92,7 +96,8 @@
         ],
         "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/alumni.gif",
+        "images":[]
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
@@ -112,7 +117,8 @@
         ],
         "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/wayfinding.gif",
+        "images":[]
     },
     {
         "name": "Burrard Place Presentation Centre",
@@ -130,7 +136,8 @@
         ],
         "link": "http://burrardplace.ca/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/burrard.jpg",
+        "images":[]
     },
     {
         "name": "Mental Health Indicators for Canada",
@@ -147,7 +154,8 @@
         ],
         "link": "http://www.mentalhealthcommission.ca/English/informing-future-mental-health-indicators-canada",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/mhcc.jpg",
+        "images":[]
     },
     {
         "name": "CiscoGSX",
@@ -167,7 +175,8 @@
         ],
         "link": "",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/cisco.jpg",
+        "images":[]
     },
     {
         "name": "Sundance Film Festival eWaitlist",
@@ -185,7 +194,8 @@
         ],
         "link": "http://ewaitlist.sundance.org/",
         "company": "Intergalactic",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/sundance.jpg",
+        "images":[]
     },
     {
         "name": "InputHealth",
@@ -206,7 +216,8 @@
         ],
         "link": "inputhealth.com",
         "company": "Healthism",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/ih.jpg",
+        "images":[]
     },
     {
         "name": "eMAR",
@@ -229,7 +240,8 @@
         ],
         "link": "",
         "company": "Healthism",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/emar.jpg",
+        "images":[]
     },
     {
         "name": "BC-Hydro Mobile Inspection Platform",
@@ -252,7 +264,8 @@
         ],
         "link": "",
         "company": "Healthism",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/hydro.jpg",
+        "images":[]
     },
     {
         "name": "VancouverLaptop.com",
@@ -268,7 +281,8 @@
         ],
         "link": "http://vancouverlaptop.com/",
         "company": "Vancouver Laptop",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/laptop.jpg",
+        "images":[]
     },
     {
         "name": "ScreenCountry.com / LaptopScreen.com",
@@ -284,7 +298,8 @@
         ],
         "link": "http://www.screencountry.com/",
         "company": "Vancouver Laptop",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/screen.jpg",
+        "images":[]
     },
     {
         "name": "Slack LunchBot",
@@ -298,7 +313,8 @@
         "roles": [],
         "link": "https://github.com/danielravina/slack-lunch-bot",
         "company": "Open Source",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "images":[]
     },
     {
         "name": "Beeper",
@@ -313,7 +329,8 @@
         "roles": [],
         "link": "https://github.com/danielravina/beeper",
         "company": "Open Source",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "images":[]
     },
     {
         "name": "static_search",
@@ -326,7 +343,8 @@
         "roles": [],
         "link": "https://rubygems.org/gems/static_search/",
         "company": "Open Source",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "images":[]
     },
     {
         "name": "Thinkubator",
@@ -339,6 +357,7 @@
         "roles": [],
         "link": "https://github.com/danielravina/thinkubator",
         "company": "Open Source",
-        "img":""
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "images":[]
     }
 ]

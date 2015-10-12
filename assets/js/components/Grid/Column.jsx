@@ -7,7 +7,7 @@ var Column = React.createClass({
       "1": "small-12",
       "2": "small-6",
       "3": "small-4",
-      "4": "small-12 medium-3",
+      "4": "small-12 medium-3", // todo
       "6": "small-2",
       "12": "small-1"
     }[this.props.columns]
