@@ -21,7 +21,9 @@
     "jquery": "^2.1.4",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-grid-layout": "^0.8.5"
+    "react-grid-layout": "^0.8.5",
+    "react-image-gallery": "^0.4.3",
+    "react-router": "^0.13.4"
   },
   "devDependencies": {
     "express": "^4.13.3",

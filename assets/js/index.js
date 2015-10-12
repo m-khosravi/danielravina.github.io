@@ -1,7 +1,7 @@
 var React    = require('react');
 var ReactDom = require('react-dom');
-var Projects = require('./components/Projects');
+var App = require('./components/App');
 var $        = require('jquery');
 
 
-ReactDom.render(<Projects />, document.getElementById('projects'));
+ReactDom.render(<App />, document.getElementById('app'));

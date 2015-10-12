@@ -28,8 +28,8 @@ var Grid = React.createClass({
       var item = this.props.data[i];
       if (item) {
         columnsPerRow.push (
-          <Column key={i} delay={i} columns={COLUMNS}>
-            <DataComponent data={item}/>
+          <Column key={i} delay={i} columns={COLUMNS} >
+            <DataComponent data={item} onClick={this.props.projectClicked}/>
           </Column>
         )
       } else {

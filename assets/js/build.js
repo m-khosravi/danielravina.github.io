@@ -46,11 +46,11 @@
 
 	var React    = __webpack_require__(1);
 	var ReactDom = __webpack_require__(157);
-	var Projects = __webpack_require__(158);
+	var App = __webpack_require__(158);
 	var $        = __webpack_require__(159);
 	
 	
-	ReactDom.render(React.createElement(Projects, null), document.getElementById('projects'));
+	ReactDom.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -19607,11 +19607,12 @@
 	var React       = __webpack_require__(1);
 	var Project     = __webpack_require__(160);
 	var Grid        = __webpack_require__(163);
+	var Modal       = __webpack_require__(166);
 	
-	var Projects = React.createClass({displayName: "Projects",
+	var App = React.createClass({displayName: "App",
 	
 	  getInitialState: function () {
-	    return { projects: [] };
+	    return { projects: [], currentProject: null };
 	  },
 	
 	  componentWillMount: function() {
@@ -19623,13 +19624,27 @@
 	  },
 	
 	  render: function() {
-	    return React.createElement(Grid, {data: this.state.projects, component: Project})
+	    return (
+	      React.createElement("div", null, 
+	        React.createElement(Modal, {currentProject: this.state.currentProject, backgroundClick: this.backgroundClick}), 
+	        React.createElement(Grid, {data: this.state.projects, component: Project, projectClicked: this.projectClicked})
+	      )
+	    )
 	  },
+	
+	  projectClicked: function(data) {
+	    this.setState({currentProject: data})
+	  },
+	
+	  backgroundClick: function() {
+	    // close
+	    this.setState({currentProject: null})
+	  }
 	
 	
 	})
 	
-	module.exports = Projects;
+	module.exports = App;
 
 /***/ },
 /* 159 */
@@ -28853,18 +28868,23 @@
 
 	var React = __webpack_require__(1);
 	var Tag   = __webpack_require__(161);
-	
+	// var Modal = require('./Modal')
 	var Project = React.createClass({displayName: "Project",
 	
 	  render: function() {
 	    return (
-	      React.createElement("div", {className: "projectTile"}, 
+	      React.createElement("div", {className: "projectTile", onClick: this.clickHandler}, 
 	        React.createElement("div", {className: "thumb", style: {backgroundImage: "url("+ this.props.data.thumb_img +")"}}), 
+	        /*<div className={"thumb"} style={{backgroundImage: "url(assets/images/test.png)"}} />*/
 	        React.createElement("footer", null, 
 	          React.createElement("p", null, this.props.data.name)
 	        )
 	      )
 	    );
+	  },
+	
+	  clickHandler: function() {
+	    this.props.onClick(this.props.data)
 	  },
 	
 	  getTags: function() {
@@ -29009,7 +29029,7 @@
 	      if (item) {
 	        columnsPerRow.push (
 	          React.createElement(Column, {key: i, delay: i, columns: COLUMNS}, 
-	            React.createElement(DataComponent, {data: item})
+	            React.createElement(DataComponent, {data: item, onClick: this.props.projectClicked})
 	          )
 	        )
 	      } else {
@@ -29088,6 +29108,552 @@
 	
 	
 	module.exports = Row;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React        = __webpack_require__(1);
+	var Tag          = __webpack_require__(161);
+	var ImageGallery = __webpack_require__(167);
+	
+	var images = [];
+	var Modal = React.createClass({displayName: "Modal",
+	
+	  getInitialProps:function() {
+	    return {
+	      currentProject: null
+	    };
+	  },
+	
+	  render: function() {
+	    if(!this.props.currentProject) {
+	      return React.createElement("div", {className: "modal hidden"})
+	    }
+	
+	    return (
+	      React.createElement("div", {className: "modal active"}, 
+	        React.createElement("div", {className: "background", onClick: this.props.backgroundClick}), 
+	        React.createElement("div", {className: "content"}, 
+	          React.createElement("div", {className: "close", onClick: this.props.backgroundClick}, "X"), 
+	          React.createElement("header", null, 
+	            React.createElement("h1", {className: "modalTitle"}, this.props.currentProject.name, 
+	              React.createElement("span", {className: "companyName"}, " @" + this.props.currentProject.company)
+	            ), 
+	            React.createElement("p", {className: "modalSubtitle"}, "Roles: ", this.props.currentProject.roles.join(', '), "."), 
+	            React.createElement("ul", {className: "tags"}, this.renderTags()), 
+	            React.createElement("p", {className: "description"}, this.props.currentProject.description)
+	          ), 
+	           React.createElement(ImageGallery, {
+	            items: images})
+	        )
+	      )
+	    );
+	  },
+	
+	  renderTags: function() {
+	    return this.props.currentProject.tech.map(function(tech, i) {
+	      return React.createElement(Tag, {key: i, tech: tech})
+	    })
+	  }
+	
+	})
+	
+	module.exports = Modal;
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactSwipeable = __webpack_require__(168);
+	
+	var _reactSwipeable2 = _interopRequireDefault(_reactSwipeable);
+	
+	var ImageGallery = _react2['default'].createClass({
+	
+	  displayName: 'ImageGallery',
+	
+	  propTypes: {
+	    items: _react2['default'].PropTypes.array.isRequired,
+	    showThumbnails: _react2['default'].PropTypes.bool,
+	    showBullets: _react2['default'].PropTypes.bool,
+	    autoPlay: _react2['default'].PropTypes.bool,
+	    lazyLoad: _react2['default'].PropTypes.bool,
+	    slideInterval: _react2['default'].PropTypes.number,
+	    onSlide: _react2['default'].PropTypes.func
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      lazyLoad: true,
+	      showThumbnails: true,
+	      showBullets: false,
+	      autoPlay: false,
+	      slideInterval: 4000
+	    };
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    return {
+	      currentIndex: 0,
+	      thumbnailsTranslateX: 0,
+	      containerWidth: 0
+	    };
+	  },
+	
+	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
+	    if (prevState.containerWidth !== this.state.containerWidth || prevProps.showThumbnails !== this.props.showThumbnails) {
+	
+	      // adjust thumbnail container when window width is adjusted
+	      // when the container resizes, thumbnailsTranslateX
+	      // should always be negative (moving right),
+	      // if container fits all thumbnails its set to 0
+	
+	      this._setThumbnailsTranslateX(-this._getScrollX(this.state.currentIndex > 0 ? 1 : 0) * this.state.currentIndex);
+	    }
+	
+	    if (prevState.currentIndex !== this.state.currentIndex) {
+	
+	      // call back function if provided
+	      if (this.props.onSlide) {
+	        this.props.onSlide(this.state.currentIndex);
+	      }
+	
+	      // calculates thumbnail container position
+	      if (this.state.currentIndex === 0) {
+	        this._setThumbnailsTranslateX(0);
+	      } else {
+	        var indexDifference = Math.abs(prevState.currentIndex - this.state.currentIndex);
+	        var _scrollX = this._getScrollX(indexDifference);
+	        if (_scrollX > 0) {
+	          if (prevState.currentIndex < this.state.currentIndex) {
+	            this._setThumbnailsTranslateX(this.state.thumbnailsTranslateX - _scrollX);
+	          } else if (prevState.currentIndex > this.state.currentIndex) {
+	            this._setThumbnailsTranslateX(this.state.thumbnailsTranslateX + _scrollX);
+	          }
+	        }
+	      }
+	    }
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this._handleResize();
+	    if (this.props.autoPlay) {
+	      this.play();
+	    }
+	    if (window.addEventListener) {
+	      window.addEventListener('resize', this._handleResize);
+	    } else if (window.attachEvent) {
+	      window.attachEvent('onresize', this._handleResize);
+	    }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    if (window.removeEventListener) {
+	      window.removeEventListener('resize', this._handleResize);
+	    } else if (window.detachEvent) {
+	      window.detachEvent('onresize', this._handleResize);
+	    }
+	
+	    if (this._intervalId) {
+	      window.clearInterval(this._intervalId);
+	      this._intervalId = null;
+	    }
+	  },
+	
+	  slideToIndex: function slideToIndex(index, event) {
+	    var slideCount = this.props.items.length - 1;
+	
+	    if (index < 0) {
+	      this.setState({ currentIndex: slideCount });
+	    } else if (index > slideCount) {
+	      this.setState({ currentIndex: 0 });
+	    } else {
+	      this.setState({ currentIndex: index });
+	    }
+	    if (event) {
+	      if (this._intervalId) {
+	        // user event, reset interval
+	        this.pause();
+	        this.play();
+	      }
+	      event.preventDefault();
+	    }
+	  },
+	
+	  play: function play() {
+	    var _this = this;
+	
+	    if (this._intervalId) {
+	      return;
+	    }
+	    this._intervalId = window.setInterval((function () {
+	      if (!_this.state.hovering) {
+	        _this.slideToIndex(_this.state.currentIndex + 1);
+	      }
+	    }).bind(this), this.props.slideInterval);
+	  },
+	
+	  pause: function pause() {
+	    if (this._intervalId) {
+	      window.clearInterval(this._intervalId);
+	      this._intervalId = null;
+	    }
+	  },
+	
+	  _setThumbnailsTranslateX: function _setThumbnailsTranslateX(x) {
+	    this.setState({ thumbnailsTranslateX: x });
+	  },
+	
+	  _handleResize: function _handleResize() {
+	    this.setState({ containerWidth: this.getDOMNode().offsetWidth });
+	  },
+	
+	  _getScrollX: function _getScrollX(indexDifference) {
+	    if (this.refs.thumbnails) {
+	      var thumbNode = this.refs.thumbnails.getDOMNode();
+	      if (thumbNode.scrollWidth <= this.state.containerWidth) {
+	        return 0;
+	      }
+	      var totalThumbnails = thumbNode.children.length;
+	
+	      // total scroll-x required to see the last thumbnail
+	      var totalScrollX = thumbNode.scrollWidth - this.state.containerWidth;
+	
+	      // scroll-x required per index change
+	      var perIndexScrollX = totalScrollX / (totalThumbnails - 1);
+	
+	      return indexDifference * perIndexScrollX;
+	    }
+	  },
+	
+	  _handleMouseOver: function _handleMouseOver() {
+	    this.setState({ hovering: true });
+	  },
+	
+	  _handleMouseLeave: function _handleMouseLeave() {
+	    this.setState({ hovering: false });
+	  },
+	
+	  _getAlignment: function _getAlignment(index) {
+	    var currentIndex = this.state.currentIndex;
+	    var alignment = '';
+	    switch (index) {
+	      case currentIndex - 1:
+	        alignment = 'left';
+	        break;
+	      case currentIndex:
+	        alignment = 'center';
+	        break;
+	      case currentIndex + 1:
+	        alignment = 'right';
+	        break;
+	    }
+	
+	    if (this.props.items.length >= 3) {
+	      if (index === 0 && currentIndex === this.props.items.length - 1) {
+	        // set first slide as right slide if were sliding right from last slide
+	        alignment = 'right';
+	      } else if (index === this.props.items.length - 1 && currentIndex === 0) {
+	        // set last slide as left slide if were sliding left from first slide
+	        alignment = 'left';
+	      }
+	    }
+	
+	    return alignment;
+	  },
+	
+	  render: function render() {
+	    var _this2 = this;
+	
+	    var currentIndex = this.state.currentIndex;
+	    var thumbnailStyle = {
+	      MozTransform: 'translate3d(' + this.state.thumbnailsTranslateX + 'px, 0, 0)',
+	      WebkitTransform: 'translate3d(' + this.state.thumbnailsTranslateX + 'px, 0, 0)',
+	      OTransform: 'translate3d(' + this.state.thumbnailsTranslateX + 'px, 0, 0)',
+	      msTransform: 'translate3d(' + this.state.thumbnailsTranslateX + 'px, 0, 0)',
+	      transform: 'translate3d(' + this.state.thumbnailsTranslateX + 'px, 0, 0)'
+	    };
+	
+	    var slides = [];
+	    var thumbnails = [];
+	    var bullets = [];
+	
+	    this.props.items.map(function (item, index) {
+	      var alignment = _this2._getAlignment(index);
+	      if (_this2.props.lazyLoad) {
+	        if (alignment) {
+	          slides.push(_react2['default'].createElement(
+	            'div',
+	            {
+	              key: index,
+	              className: 'image-gallery-slide ' + alignment },
+	            _react2['default'].createElement('img', { src: item.original })
+	          ));
+	        }
+	      } else {
+	        slides.push(_react2['default'].createElement(
+	          'div',
+	          {
+	            key: index,
+	            className: 'image-gallery-slide ' + alignment },
+	          _react2['default'].createElement('img', { src: item.original })
+	        ));
+	      }
+	
+	      if (_this2.props.showThumbnails) {
+	        thumbnails.push(_react2['default'].createElement(
+	          'a',
+	          {
+	            key: index,
+	            className: 'image-gallery-thumbnail ' + (currentIndex === index ? 'active' : ''),
+	
+	            onTouchStart: _this2.slideToIndex.bind(_this2, index),
+	            onClick: _this2.slideToIndex.bind(_this2, index) },
+	          _react2['default'].createElement('img', { src: item.thumbnail })
+	        ));
+	      }
+	
+	      if (_this2.props.showBullets) {
+	        bullets.push(_react2['default'].createElement('li', {
+	          key: index,
+	          className: 'image-gallery-bullet ' + (currentIndex === index ? 'active' : ''),
+	
+	          onTouchStart: _this2.slideToIndex.bind(_this2, index),
+	          onClick: _this2.slideToIndex.bind(_this2, index) }));
+	      }
+	    });
+	
+	    var swipePrev = this.slideToIndex.bind(this, currentIndex - 1);
+	    var swipeNext = this.slideToIndex.bind(this, currentIndex + 1);
+	
+	    return _react2['default'].createElement(
+	      'section',
+	      { className: 'image-gallery' },
+	      _react2['default'].createElement(
+	        'div',
+	        {
+	          onMouseOver: this._handleMouseOver,
+	          onMouseLeave: this._handleMouseLeave,
+	          className: 'image-gallery-content' },
+	        _react2['default'].createElement('a', { className: 'image-gallery-left-nav',
+	          onTouchStart: swipePrev,
+	          onClick: swipePrev }),
+	        _react2['default'].createElement('a', { className: 'image-gallery-right-nav',
+	          onTouchStart: swipeNext,
+	          onClick: swipeNext }),
+	        _react2['default'].createElement(
+	          _reactSwipeable2['default'],
+	          {
+	            onSwipedLeft: swipeNext,
+	            onSwipedRight: swipePrev },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'image-gallery-slides' },
+	            slides
+	          )
+	        ),
+	        this.props.showBullets && _react2['default'].createElement(
+	          'div',
+	          { className: 'image-gallery-bullets' },
+	          _react2['default'].createElement(
+	            'ul',
+	            { className: 'image-gallery-bullets-container' },
+	            bullets
+	          )
+	        )
+	      ),
+	      this.props.showThumbnails && _react2['default'].createElement(
+	        'div',
+	        { className: 'image-gallery-thumbnails' },
+	        _react2['default'].createElement(
+	          'div',
+	          {
+	            ref: 'thumbnails',
+	            className: 'image-gallery-thumbnails-container',
+	            style: thumbnailStyle },
+	          thumbnails
+	        )
+	      )
+	    );
+	  }
+	
+	});
+	
+	exports['default'] = ImageGallery;
+	module.exports = exports['default'];
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1)
+	
+	var Swipeable = React.createClass({displayName: "Swipeable",
+	  propTypes: {
+	    onSwiped: React.PropTypes.func,
+	    onSwipingUp: React.PropTypes.func,
+	    onSwipingRight: React.PropTypes.func,
+	    onSwipingDown: React.PropTypes.func,
+	    onSwipingLeft: React.PropTypes.func,
+	    onSwipedUp: React.PropTypes.func,
+	    onSwipedRight: React.PropTypes.func,
+	    onSwipedDown: React.PropTypes.func,
+	    onSwipedLeft: React.PropTypes.func,
+	    flickThreshold: React.PropTypes.number,
+	    delta: React.PropTypes.number
+	  },
+	
+	  getInitialState: function () {
+	    return {
+	      x: null,
+	      y: null,
+	      swiping: false,
+	      start: 0
+	    }
+	  },
+	
+	  getDefaultProps: function () {
+	    return {
+	      flickThreshold: 0.6,
+	      delta: 10
+	    }
+	  },
+	
+	  calculatePos: function (e) {
+	    var x = e.changedTouches[0].clientX
+	    var y = e.changedTouches[0].clientY
+	
+	    var xd = this.state.x - x
+	    var yd = this.state.y - y
+	
+	    var axd = Math.abs(xd)
+	    var ayd = Math.abs(yd)
+	
+	    return {
+	      deltaX: xd,
+	      deltaY: yd,
+	      absX: axd,
+	      absY: ayd
+	    }
+	  },
+	
+	  touchStart: function (e) {
+	    if (e.touches.length > 1) {
+	      return
+	    }
+	    this.setState({
+	      start: Date.now(),
+	      x: e.touches[0].clientX,
+	      y: e.touches[0].clientY,
+	      swiping: false
+	    })
+	  },
+	
+	  touchMove: function (e) {
+	    if (!this.state.x || !this.state.y || e.touches.length > 1) {
+	      return
+	    }
+	
+	    var cancelPageSwipe = false
+	    var pos = this.calculatePos(e)
+	
+	    if (pos.absX < this.props.delta && pos.absY < this.props.delta) {
+	      return
+	    }
+	
+	    if (pos.absX > pos.absY) {
+	      if (pos.deltaX > 0) {
+	        if (this.props.onSwipingLeft) {
+	          this.props.onSwipingLeft(e, pos.absX)
+	          cancelPageSwipe = true
+	        }
+	      } else {
+	        if (this.props.onSwipingRight) {
+	          this.props.onSwipingRight(e, pos.absX)
+	          cancelPageSwipe = true
+	        }
+	      }
+	    } else {
+	      if (pos.deltaY > 0) {
+	        if (this.props.onSwipingUp) {
+	          this.props.onSwipingUp(e, pos.absY)
+	          cancelPageSwipe = true
+	        }
+	      } else {
+	        if (this.props.onSwipingDown) {
+	          this.props.onSwipingDown(e, pos.absY)
+	          cancelPageSwipe = true
+	        }
+	      }
+	    }
+	
+	    this.setState({ swiping: true })
+	
+	    if (cancelPageSwipe) {
+	      e.preventDefault()
+	    }
+	  },
+	
+	  touchEnd: function (ev) {
+	    if (this.state.swiping) {
+	      var pos = this.calculatePos(ev)
+	
+	      var time = Date.now() - this.state.start
+	      var velocity = Math.sqrt(pos.absX * pos.absX + pos.absY * pos.absY) / time
+	      var isFlick = velocity > this.props.flickThreshold
+	
+	      this.props.onSwiped && this.props.onSwiped(
+	        ev,
+	        pos.deltaX,
+	        pos.deltaY,
+	        isFlick
+	      )
+	      
+	      if (pos.absX > pos.absY) {
+	        if (pos.deltaX > 0) {
+	          this.props.onSwipedLeft && this.props.onSwipedLeft(ev, pos.deltaX)
+	        } else {
+	          this.props.onSwipedRight && this.props.onSwipedRight(ev, pos.deltaX)
+	        }
+	      } else {
+	        if (pos.deltaY > 0) {
+	          this.props.onSwipedUp && this.props.onSwipedUp(ev, pos.deltaY)
+	        } else {
+	          this.props.onSwipedDown && this.props.onSwipedDown(ev, pos.deltaY)
+	        }
+	      }
+	    }
+	    
+	    this.setState(this.getInitialState())
+	  },
+	
+	  render: function () {
+	    return (
+	      React.createElement("div", React.__spread({},  this.props, 
+	        {onTouchStart: this.touchStart, 
+	        onTouchMove: this.touchMove, 
+	        onTouchEnd: this.touchEnd}), 
+	          this.props.children
+	      )  
+	    )
+	  }
+	})
+	
+	module.exports = Swipeable
+
 
 /***/ }
 /******/ ]);

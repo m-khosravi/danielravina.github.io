@@ -1,7 +1,7 @@
 body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-  min-height: 400px;
+  min-height:100%
 }
 ul {
   margin:0; padding: 0;
@@ -10,6 +10,10 @@ a {
   -webkit-transition: color .4s ease;
   text-decoration: none;
   color: rgb(175, 175, 175);
+}
+
+.center {
+  text-align: center;
 }
 
 header#main a:hover {

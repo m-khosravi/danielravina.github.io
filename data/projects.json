@@ -25,6 +25,24 @@
         "images":[]
     },
     {
+        "name": "UBC Robert H. Lee Alumni Centre - Donor Recognition Wall",
+        "description": "Interactive touch screen in honor of he donors who helped build UBC",
+        "tech": [
+            "Socket.io",
+            "TweenMax",
+            "Web Services",
+            "Bolt.cm"
+        ],
+        "roles": [
+            "Frontend",
+            "Integrations"
+        ],
+        "link": "http://alumnicentre.ubc.ca/",
+        "company": "Intergalactic",
+        "thumb_img":"http://i.giphy.com/xTiTnAQW6NwbyN0OI0.gif",
+        "images":[]
+    },
+    {
         "name": "Honestly Healthy",
         "description": "Healthy Recipes App",
         "tech": [
@@ -64,24 +82,6 @@
         "images":[]
     },
     {
-        "name": "UBC Robert H. Lee Alumni Centre - Donor Recognition Wall",
-        "description": "Interactive touch screen for the donors who helped build UBC",
-        "tech": [
-            "Socket.io",
-            "TweenMax",
-            "Web Services",
-            "Bolt.cm"
-        ],
-        "roles": [
-            "Frontend",
-            "Integrations"
-        ],
-        "link": "http://alumnicentre.ubc.ca/",
-        "company": "Intergalactic",
-        "thumb_img":"http://i.giphy.com/xTiTnAQW6NwbyN0OI0.gif",
-        "images":[]
-    },
-    {
         "name": "UBC Robert H. Lee Alumni Centre - Lobby Interactive Wall",
         "description": "5 Screen Interactive Wall that tells you everything you need to know about UBC events and Alumni",
         "tech": [
@@ -97,27 +97,6 @@
         "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
         "thumb_img":"http://i.giphy.com/xTiTnkvNsVgxlbi396.gif",
-        "images":[]
-    },
-    {
-        "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
-        "description": "Front-desk Kiosk that shows events schedule, interactive 3d building map and UBC campus map",
-        "tech": [
-            "Browserify",
-            "Backbone",
-            "Socket.io",
-            "Three.js",
-            "TweenMax",
-            "Gulp",
-            "Web Services"
-        ],
-        "roles": [
-            "Frontend",
-            "Integrations"
-        ],
-        "link": "http://alumnicentre.ubc.ca/",
-        "company": "Intergalactic",
-        "thumb_img":"http://i.giphy.com/xTiTnIXNJ6YqSzDIvm.gif",
         "images":[]
     },
     {
@@ -140,21 +119,24 @@
         "images":[]
     },
     {
-        "name": "Mental Health Indicators for Canada",
+        "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
+        "description": "Front-desk Kiosk that shows events schedule, interactive 3d building map and UBC campus map",
         "tech": [
-            "PHP",
-            "Flexbox",
-            "SQLite",
-            "Subversion"
+            "Browserify",
+            "Backbone",
+            "TweenMax",
+            "Three.js",
+            "Socket.io",
+            "Gulp",
+            "Web Services"
         ],
         "roles": [
-            "QA",
-            "Deployments",
-            "Frontend"
+            "Frontend",
+            "Integrations"
         ],
-        "link": "http://www.mentalhealthcommission.ca/English/informing-future-mental-health-indicators-canada",
+        "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/mhcc.jpg",
+        "thumb_img":"http://i.giphy.com/xTiTnIXNJ6YqSzDIvm.gif",
         "images":[]
     },
     {
@@ -176,6 +158,24 @@
         "link": "",
         "company": "Intergalactic",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/cisco.jpg",
+        "images":[]
+    },
+    {
+        "name": "Mental Health Indicators for Canada",
+        "tech": [
+            "PHP",
+            "Flexbox",
+            "SQLite",
+            "Subversion"
+        ],
+        "roles": [
+            "QA",
+            "Deployments",
+            "Frontend"
+        ],
+        "link": "http://www.mentalhealthcommission.ca/English/informing-future-mental-health-indicators-canada",
+        "company": "Intergalactic",
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/mhcc.jpg",
         "images":[]
     },
     {
@@ -244,14 +244,14 @@
         "images":[]
     },
     {
-        "name": "BC-Hydro Mobile Inspection Platform",
+        "name": "BCHydro Mobile Inspection Platform",
         "description": "Monitoring and asset management system",
         "tech": [
             "Rails",
             "PhoneGap",
             "localStorage",
-            "HTML5 Geolocation",
             "Backbone",
+            "HTML5 Geolocation",
             "RESTful API",
             "ActiveRecord"
         ],
@@ -310,7 +310,7 @@
             "Yelp API",
             "AWS"
         ],
-        "roles": [],
+        "roles": ["Owner"],
         "link": "https://github.com/danielravina/slack-lunch-bot",
         "company": "Open Source",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
@@ -326,7 +326,7 @@
             "Flux",
             "React Native"
         ],
-        "roles": [],
+        "roles": ["Owner"],
         "link": "https://github.com/danielravina/beeper",
         "company": "Open Source",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
@@ -340,7 +340,7 @@
             "Nokogiri",
             "ActiveRecord"
         ],
-        "roles": [],
+        "roles": ["Owner"],
         "link": "https://rubygems.org/gems/static_search/",
         "company": "Open Source",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
@@ -354,7 +354,7 @@
             "Samsung SmartTV SDK",
             "Dropbox API"
         ],
-        "roles": [],
+        "roles": ["Owner"],
         "link": "https://github.com/danielravina/thinkubator",
         "company": "Open Source",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
