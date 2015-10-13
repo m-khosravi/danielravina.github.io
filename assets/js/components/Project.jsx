@@ -7,7 +7,6 @@ var Project = React.createClass({
     return (
       <div className={"projectTile"} onClick={this.clickHandler}>
         <div className={"thumb"} style={{backgroundImage: "url("+ this.props.data.thumb_img +")"}} />
-        {/*<div className={"thumb"} style={{backgroundImage: "url(assets/images/test.png)"}} />*/}
         <footer>
           <p>{this.props.data.name}</p>
         </footer>

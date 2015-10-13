@@ -15,7 +15,7 @@ var Grid = React.createClass({
     })
 
     return (
-      <div className={"react-grid"}>
+      <div className={"react-grid"} >
         {rows}
       </div>
     )
@@ -36,8 +36,8 @@ var Grid = React.createClass({
         columnsPerRow.push(
           <Column key={i} columns={COLUMNS}>
             <div className={"lastColumn"}>
-              <h3>Hello.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos temporibus harum, officiis autem possimus obcaecati?</p>
+              <h3>Hi There!</h3>
+              <p>Found anything useful on this site? <a href={"#contact"}>Drop me a line</a>, I'd love to hear about it.</p>
             </div>
           </Column>
         );

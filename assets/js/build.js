@@ -47,8 +47,6 @@
 	var React    = __webpack_require__(1);
 	var ReactDom = __webpack_require__(157);
 	var App = __webpack_require__(158);
-	var $        = __webpack_require__(159);
-	
 	
 	ReactDom.render(React.createElement(App, null), document.getElementById('app'));
 
@@ -19626,7 +19624,7 @@
 	  render: function() {
 	    return (
 	      React.createElement("div", null, 
-	        React.createElement(Modal, {currentProject: this.state.currentProject, backgroundClick: this.backgroundClick}), 
+	        React.createElement(Modal, {project: this.state.currentProject, backgroundClick: this.backgroundClick}), 
 	        React.createElement(Grid, {data: this.state.projects, component: Project, projectClicked: this.projectClicked})
 	      )
 	    )
@@ -28875,7 +28873,6 @@
 	    return (
 	      React.createElement("div", {className: "projectTile", onClick: this.clickHandler}, 
 	        React.createElement("div", {className: "thumb", style: {backgroundImage: "url("+ this.props.data.thumb_img +")"}}), 
-	        /*<div className={"thumb"} style={{backgroundImage: "url(assets/images/test.png)"}} />*/
 	        React.createElement("footer", null, 
 	          React.createElement("p", null, this.props.data.name)
 	        )
@@ -29036,8 +29033,8 @@
 	        columnsPerRow.push(
 	          React.createElement(Column, {key: i, columns: COLUMNS}, 
 	            React.createElement("div", {className: "lastColumn"}, 
-	              React.createElement("h3", null, "Hello."), 
-	              React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos temporibus harum, officiis autem possimus obcaecati?")
+	              React.createElement("h3", null, "Hi There!"), 
+	              React.createElement("p", null, "Found anything useful on this site? ", React.createElement("a", {href: "#contact"}, "Drop me a line"), ", I'd love to hear about it.")
 	            )
 	          )
 	        );
@@ -29117,44 +29114,95 @@
 	var Tag          = __webpack_require__(161);
 	var ImageGallery = __webpack_require__(167);
 	
-	var images = [];
 	var Modal = React.createClass({displayName: "Modal",
+	  // prevent from fetching again
+	  cache: {
+	    tags: {},
+	    images: {}
+	  },
 	
 	  getInitialProps:function() {
 	    return {
-	      currentProject: null
+	      project: null
 	    };
 	  },
 	
 	  render: function() {
-	    if(!this.props.currentProject) {
+	    if(!this.props.project) {
 	      return React.createElement("div", {className: "modal hidden"})
 	    }
+	
 	
 	    return (
 	      React.createElement("div", {className: "modal active"}, 
 	        React.createElement("div", {className: "background", onClick: this.props.backgroundClick}), 
-	        React.createElement("div", {className: "content"}, 
+	        React.createElement("div", {className: "content", style: this._imagesExists() ? {} : {top: "200px"}}, 
 	          React.createElement("div", {className: "close", onClick: this.props.backgroundClick}, "X"), 
 	          React.createElement("header", null, 
-	            React.createElement("h1", {className: "modalTitle"}, this.props.currentProject.name, 
-	              React.createElement("span", {className: "companyName"}, " @" + this.props.currentProject.company)
+	            React.createElement("h1", {className: "modalTitle"}, this.props.project.name, 
+	              React.createElement("span", {className: "companyName"}, " @" + this.props.project.company)
 	            ), 
-	            React.createElement("p", {className: "modalSubtitle"}, "Roles: ", this.props.currentProject.roles.join(', '), "."), 
+	            React.createElement("p", {className: "modalSubtitle"}, "Roles: ", this.props.project.roles.join(', '), "."), 
 	            React.createElement("ul", {className: "tags"}, this.renderTags()), 
-	            React.createElement("p", {className: "description"}, this.props.currentProject.description)
+	            React.createElement("p", {className: "description"}, this.props.project.description)
 	          ), 
-	           React.createElement(ImageGallery, {
-	            items: images})
+	          this.renderGallery()
 	        )
 	      )
 	    );
 	  },
 	
+	  renderImages: function() {
+	    // check if images were rendered in before
+	    if (this.cache.images[this.props.project.name]) {
+	      // returned cached version
+	      return this.cache.images[this.props.project.name]
+	    }
+	
+	    // .. if not, fetch them again
+	    var images = this.props.project.images.map(function(img){
+	      return { original: img } // required for react-image-gallery
+	    })
+	
+	    // add to cache
+	    this.cache.images[this.props.project.name] = images // cache
+	
+	    return images;
+	  },
+	
 	  renderTags: function() {
-	    return this.props.currentProject.tech.map(function(tech, i) {
+	   // check if images were rendered in before
+	    if (this.cache.tags[this.props.project.name]) {
+	      // returned cached version
+	      return this.cache.tags[this.props.project.name]
+	    }
+	
+	    var tags = this.props.project.tech.map(function(tech, i) {
 	      return React.createElement(Tag, {key: i, tech: tech})
 	    })
+	
+	    // add to cache
+	    this.cache.tags[this.props.project.name] = tags // cache
+	
+	    return tags;
+	  },
+	
+	  renderGallery: function() {
+	    if(this._imagesExists()) {
+	      return (React.createElement(ImageGallery, {
+	              items: this.renderImages()}));
+	    } else {
+	      // just show the link
+	      return (
+	        React.createElement("h4", {className: "link"}, 
+	          React.createElement("a", {target: "_blank", href: this.props.project.link}, this.props.project.link)
+	        )
+	      )
+	    }
+	  },
+	
+	  _imagesExists:function() {
+	    return this.props.project.images.length > 0;
 	  }
 	
 	})

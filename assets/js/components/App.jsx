@@ -21,7 +21,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <Modal currentProject={this.state.currentProject} backgroundClick={this.backgroundClick}/>
+        <Modal project={this.state.currentProject} backgroundClick={this.backgroundClick}/>
         <Grid data={this.state.projects} component={Project} projectClicked={this.projectClicked} />
       </div>
     )
