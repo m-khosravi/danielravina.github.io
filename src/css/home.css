@@ -123,8 +123,19 @@ ul.tags li.bright {
   font-size:18px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 990px),  {
   .projectTile .thumb {
     background-size: 250%;
+  }
+}
+@media (max-width: 640px),  {
+  .projectTile .thumb {
+    background-size: auto 133%;
+    background-position: center center;
+  }
+}
+@media (max-width: 640px),  {
+  .projectTile h3 {
+    font-size: 36px;
   }
 }

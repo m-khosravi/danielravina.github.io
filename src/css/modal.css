@@ -84,3 +84,15 @@ p.description {
   color:#72C59F;
   font-size: 18px;
 }
+
+@media (max-height: 670px) {
+  section.image-gallery img {
+    max-height: 380px;
+  }
+}
+
+@media (max-height: 570px) {
+  section.image-gallery img {
+    max-height:287px;
+  }
+}

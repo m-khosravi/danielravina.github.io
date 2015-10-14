@@ -1,7 +1,7 @@
 [
     {
         "name": "Special Occasion Licences Online (SOLO)",
-        "description": "Enterprise application for automated liquor licensing in British Columbia",
+        "description": "An online liquor licensing system for public and private events, operated by the BC government.",
         "tech": [
             "Rails",
             "Cucumber",
@@ -28,7 +28,7 @@
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Donor Recognition Wall",
-        "description": "Interactive touch screen in honor of he donors who helped build UBC",
+        "description": "Interactive touch screen that tells the story of the donors who helped build UBC.",
         "tech": [
             "Socket.io",
             "TweenMax",
@@ -41,7 +41,7 @@
         ],
         "link": "http://alumnicentre.ubc.ca/",
         "company": "Intergalactic",
-        "thumb_img":"http://i.giphy.com/xTiTnAQW6NwbyN0OI0.gif",
+        "thumb_img": "http://i.giphy.com/xTiTnAQW6NwbyN0OI0.gif",
         "images":[
             "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_ubc-donorwall.jpg",
             "http://i.giphy.com/xTiTnAQW6NwbyN0OI0.gif"
@@ -49,13 +49,13 @@
     },
     {
         "name": "Honestly Healthy",
-        "description": "Healthy Recipes App",
+        "description": "Healthy and Organic Recipes App.",
         "tech": [
-            "PhoneGap",
             "Backbone",
             "localStorage",
             "jQuery",
             "CoffeeScript",
+            "PhoneGap",
             "In-App Purchase"
         ],
         "roles": [
@@ -73,7 +73,7 @@
     },
     {
         "name": "Squamish Festival 2015",
-        "description": "The official website for the Squamish Valley festival 2015",
+        "description": "The official Squamish Valley Festival 2015 website.",
         "tech": [
             "AWS",
             "PHP",
@@ -93,7 +93,7 @@
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Lobby Interactive Wall",
-        "description": "5 Screen Interactive Wall that tells you everything you need to know about UBC events and Alumni",
+        "description": "A five-screen wall, connected to the UBC alumni database and provides interactive data visualizations.",
         "tech": [
             "Socket.io",
             "Instagram API",
@@ -113,7 +113,7 @@
     },
     {
         "name": "Burrard Place Presentation Centre",
-        "description": "Interactive installations in the Burrard place sales center including 5 screen wall and a 3X3 video wall, all controlled by Surface Pro tablets",
+        "description": "Installations for the Burrard Place Presentation Center, including five-screen wall and a 3X3 video wall, all controlled by Surface Pro tablets.",
         "tech": [
             "Node.js",
             "Express",
@@ -135,7 +135,7 @@
     },
     {
         "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
-        "description": "Front-desk Kiosk that shows events schedule, interactive 3d building map and UBC campus map",
+        "description": "Front-desk kiosk that shows event schedules, touch enabled 3d map and the UBC campus map.",
         "tech": [
             "Browserify",
             "Backbone",
@@ -147,6 +147,7 @@
         ],
         "roles": [
             "Frontend",
+            "Backend",
             "Integrations"
         ],
         "link": "http://alumnicentre.ubc.ca/",
@@ -161,7 +162,7 @@
     },
     {
         "name": "CiscoGSX",
-        "description": "Internal website for the CiscoGSX attendees",
+        "description": "CiscoGSX is an annual event hosted by Cicso System inc. We built the front facing website which sits on Cisco's infrastructure and communicate back and forth with the mobile app that was built by Eventbase.",
         "tech": [
             "Rails",
             "Varnish",
@@ -184,6 +185,7 @@
     },
     {
         "name": "Mental Health Indicators for Canada",
+        "description": "",
         "tech": [
             "PHP",
             "Flexbox",
@@ -204,7 +206,7 @@
     },
     {
         "name": "Sundance Film Festival eWaitlist",
-        "description": "The official app of the Sundance Film Festival",
+        "description": "The official mobile App and eWaitlist system of the Sundance Film Festival.",
         "tech": [
             "CakePHP",
             "Redis",
@@ -225,7 +227,7 @@
     },
     {
         "name": "InputHealth",
-        "description": "SAAS application for hospitals and Clinics that helps manage patient data, eBookings and provides detailed real-time analytics",
+        "description": "SaaS application for hospitals and clinics. The suite includes patient data management, eBooking, real-time analytics and an advanced questionnaire builder.",
         "tech": [
             "Rails",
             "Backbone",
@@ -249,7 +251,7 @@
     },
     {
         "name": "Project eMAR",
-        "description": "Mobile application for medication distribution in Nursing homes",
+        "description": "A mobile app that manages medication administrations in nursing homes.",
         "tech": [
             "Rails",
             "PhoneGap",
@@ -275,7 +277,7 @@
     },
     {
         "name": "BCHydro Mobile Inspection Platform",
-        "description": "Monitoring and asset management system",
+        "description": "Monitoring, asset management and a fully featured field inspection system.",
         "tech": [
             "Rails",
             "PhoneGap",
@@ -301,7 +303,7 @@
     },
     {
         "name": "VancouverLaptop.com",
-        "description": "POS system and e-commerce site for new and used Laptops across Vancouver",
+        "description": "The Point of Sale software and public e-commerce website which distributes new and used laptops across the lower mainland.",
         "tech": [
             "PHP",
             "MySQL",
@@ -320,7 +322,7 @@
     },
     {
         "name": "ScreenCountry.com / LaptopScreen.com",
-        "description": "LCD screens marketplace, video tutorials and much more",
+        "description": "LCD screens marketplace, video tutorials and much more.",
         "tech": [
             "PHP",
             "MySQL",
@@ -339,7 +341,7 @@
     },
     {
         "name": "Slack LunchBot",
-        "description": "A Slack bot that gives suggestions on where to eat lunch based on their location",
+        "description": "A Slackbot that gives recommendations for potential lunch places around a chosen area using Yelp.",
         "tech": [
             "Node.js",
             "ECMAScript 2015",
@@ -356,7 +358,7 @@
     },
     {
         "name": "Beeper",
-        "description": "Scheduling platform for small businesses",
+        "description": "Scheduling platform for small businesses.",
         "tech": [
             "Rails",
             "React",
@@ -374,7 +376,7 @@
     },
     {
         "name": "static_search",
-        "description": "a Rails plugin that allows you to index static HTML pages and makes them search-able.",
+        "description": "a Rails plug-in that allows you to index static HTML pages and makes them search-able. Was built as a part of the CiscoGSX Project.",
         "tech": [
             "Ruby",
             "Nokogiri",
@@ -390,7 +392,7 @@
     },
     {
         "name": "Thinkubator",
-        "description": "A prototype Samsung Smart TV application to display Images from dropbox in a gallery sideshow",
+        "description": "A prototype Samsung Smart TV application to display images from Dropbox in a gallery sideshow.",
         "tech": [
             "Socket.io",
             "Samsung SmartTV SDK",
