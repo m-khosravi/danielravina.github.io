@@ -67,8 +67,8 @@
         "company": "Intergalactic",
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/hh.jpg",
         "images":[
-            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_hh1.jpg",
-            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_hh2.jpg"
+            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_hh1.png",
+            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_hh2.png"
         ]
     },
     {
@@ -351,7 +351,7 @@
         "roles": ["Owner"],
         "link": "https://github.com/danielravina/slack-lunch-bot",
         "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/heisencat.png",
         "images":[
 
         ]
@@ -385,7 +385,7 @@
         "roles": ["Owner"],
         "link": "https://rubygems.org/gems/static_search/",
         "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/ironcat.png",
         "images":[
 
         ]
@@ -401,7 +401,7 @@
         "roles": ["Owner"],
         "link": "https://github.com/danielravina/thinkubator",
         "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
+        "thumb_img":"https://s-media-cache-ak0.pinimg.com/736x/16/64/c5/1664c50e43535640ec7cc40d49b0b017.jpg",
         "images":[
 
         ]

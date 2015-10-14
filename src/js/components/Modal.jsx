@@ -24,7 +24,7 @@ var Modal = React.createClass({
     return (
       <div className={"modal active"}>
         <div className={"background"} onClick={this.props.backgroundClick}></div>
-        <div className={"content"} style={this._imagesExists() ? {} : {top: "200px"}}>
+        <div className={"content"} style={this._imagesExists() ? {} : {top: "15%"}}>
           <div className={"close"} onClick={this.props.backgroundClick}>X</div>
           <header>
             <h1 className={"modalTitle"}>{this.props.project.name}

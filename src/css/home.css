@@ -108,6 +108,7 @@ ul.tags li {
   font-weight: 300;
   cursor: default;
   border-radius: 4px;
+  margin-bottom: 6px;
 }
 
 ul.tags li.bright {
@@ -130,7 +131,7 @@ ul.tags li.bright {
 }
 @media (max-width: 640px),  {
   .projectTile .thumb {
-    background-size: auto 133%;
+    background-size: auto 160%;
     background-position: center center;
   }
 }

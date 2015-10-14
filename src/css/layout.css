@@ -11,7 +11,9 @@ a {
   text-decoration: none;
   color: rgb(175, 175, 175);
 }
-
+footer a {
+  text-decoration: underline;
+}
 .center {
   text-align: center;
 }
