@@ -24,7 +24,7 @@ var Modal = React.createClass({
     return (
       <div className={"modal active"}>
         <div className={"background"} onClick={this.props.backgroundClick}></div>
-        <div className={"content"} style={this._imagesExists() ? {} : {top: "15%"}}>
+        <div className={"content"} style={this._imagesExists() || this._hasVideo() ? {} : {top: "15%"}}>
           <div className={"close"} onClick={this.props.backgroundClick}>X</div>
           <header>
             <h1 className={"modalTitle"}>{this.props.project.name}
@@ -79,8 +79,11 @@ var Modal = React.createClass({
     if(this._imagesExists()) {
       return (<ImageGallery
               items={this.renderImages()}/>);
+    } else if(this._hasVideo()) {
+      return(<div className={"iframeWrapper"}>
+        <iframe src={this.props.project.video} width={'800px'} height={'400px'}></iframe>
+      </div>);
     } else {
-      // just show the link
       return (
         <h4 className={"link"}>
           <a target={"_blank"} href={this.props.project.link}>{this.props.project.link}</a>
@@ -91,6 +94,10 @@ var Modal = React.createClass({
 
   _imagesExists:function() {
     return this.props.project.images.length > 0;
+  },
+
+  _hasVideo: function() {
+    return !!this.props.project.video;
   }
 
 })

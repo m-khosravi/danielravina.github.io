@@ -85,6 +85,10 @@ p.description {
   font-size: 18px;
 }
 
+.iframeWrapper {
+  text-align: center;
+}
+
 @media (max-height: 670px) {
   section.image-gallery img {
     max-height: 380px;
