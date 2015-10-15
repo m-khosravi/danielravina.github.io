@@ -1,0 +1,5 @@
+#!/bin/bash
+
+webpack -p
+cleancss src/css/style.css -o style.min.css
+
