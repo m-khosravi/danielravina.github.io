@@ -1,42 +1,30 @@
-var $           = require('jquery');
 var React       = require('react');
-var Project     = require('./Project');
-var Grid        = require('./Grid/Grid');
-var Modal       = require('./Modal');
+var ReactRouter = require('react-router');
+var Link  = ReactRouter.Link
 
-var App = React.createClass({
-
-  getInitialState: function () {
-    return { projects: [], currentProject: null };
-  },
-
-  componentWillMount: function() {
-    (function(_this) {
-      $.get('data/projects.json',  function(projects) {
-        _this.setState({projects: projects})
-      })
-    })(this)
-  },
-
+var About = React.createClass({
   render: function() {
     return (
-      <div>
-        <Modal project={this.state.currentProject} backgroundClick={this.backgroundClick}/>
-        <Grid data={this.state.projects} component={Project} projectClicked={this.projectClicked} />
-      </div>
+      <header id="main">
+        <div class="wrapper">
+          <h1 id="logo"><span>D</span>aniel <span class="mirror">R</span>avina</h1>
+          <ul>
+            <li><a href="">home</a></li>
+            <li><a href="about">about</a></li>
+            <li><a href="contact">contact</a></li>
+          </ul>
+        </div>
+      </header>
+      {this.props.children}
+      <footer id="main">
+        <p>
+        <a target="_blank" href="https://github.com/danielravina/danielravina.github.io">Built</a>
+        and designed by <a href="#about">me</a> <br/ >
+        using <img src="src/images/icons/react.png" id="react-icon"><a target="_blank"  href="https://facebook.github.io/react/">React.js</a></p>
+      </footer>
     )
-  },
-
-  projectClicked: function(data) {
-    this.setState({currentProject: data})
-  },
-
-  backgroundClick: function() {
-    // close
-    this.setState({currentProject: null})
   }
-
-
 })
 
-module.exports = App;
+
+module.exports = About;

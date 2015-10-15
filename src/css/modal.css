@@ -70,11 +70,10 @@ p.description {
   right:15.41px; top:15.41px;
   font-weight: bolder;
   cursor: pointer;
-  background-color: #222;
+  color: #222;
   width: 20px;
   height: 20px;
   text-align: center;
-  color: white;
   border-radius: 50%;
   font-size: 13px;
   padding-top: 1px;
