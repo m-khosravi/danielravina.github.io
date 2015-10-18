@@ -37,7 +37,7 @@ var Grid = React.createClass({
           <Column key={i} columns={COLUMNS}>
             <div className={"lastColumn"}>
               <h3>Hi There!</h3>
-              <p>Found anything useful on this site? <a href={"#contact"}>Drop me a line</a>, I'd love to hear about it.</p>
+              <p>Found anything useful on this site? <a href="contact">Drop me a line</a>, I'd love to hear about it.</p>
             </div>
           </Column>
         );

@@ -1,5 +1,4 @@
 node_modules
-assets/js/build.js.map
-assets/js/build.js
-assets/images/test*
+src/js/build.js.map
+src/images/test*
 deploy
