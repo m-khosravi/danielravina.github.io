@@ -1,8 +1,9 @@
-var $           = require('jquery');
-var React       = require('react');
-var Project     = require('./Project');
-var Grid        = require('./Grid');
-var Modal       = require('./Modal');
+var $                       = require('jquery');
+var React                   = require('react');
+var Project                 = require('./Project');
+var Grid                    = require('./Grid');
+var Modal                   = require('./Modal');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var Home = React.createClass({
 
@@ -20,8 +21,8 @@ var Home = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <Modal project={this.state.currentProject} backgroundClick={this.backgroundClick}/>
+      <div id="home">
+        <Modal project={this.state.currentProject} backgroundClick={this.backgroundClick} />
         <Grid data={this.state.projects} component={Project} projectClicked={this.projectClicked} />
       </div>
     )

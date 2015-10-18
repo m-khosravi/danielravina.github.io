@@ -10,7 +10,7 @@
 
 
 /* Overrides*/
-.columns {
+#home .columns {
   -webkit-transform:translateY(15px);
   opacity: 0;
   transition: all 0.8s ease;
@@ -18,17 +18,17 @@
   z-index: 10;
 }
 
-.columns.enter {
+#home  .columns.enter {
   -webkit-transform:translateY(0);
   opacity: 1;
 }
 
-.projectTile {
+#home .projectTile {
   cursor: pointer;
   overflow: hidden;
 }
 
-.columns.active {
+#home .columns.active {
   width: 100%;
   height: 600px;
 }

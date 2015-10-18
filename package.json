@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/danielravina/danielravina.github.io#readme",
   "dependencies": {
+    "ejs": "^2.3.4",
     "history": "^1.12.5",
     "jquery": "^2.1.4",
+    "query-string": "^3.0.0",
     "react": "^0.14.0",
+    "react-addons-css-transition-group": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-grid-layout": "^0.8.5",
     "react-image-gallery": "git+https://github.com/danielravina/react-image-gallery.git",

@@ -17,22 +17,22 @@ var Modal = React.createClass({
 
   render: function() {
     if(!this.props.project) {
-      return <div className={"modal hidden"} />
+      return <div className="modal hidden" />
     }
 
 
     return (
-      <div className={"modal active"}>
-        <div className={"background"} onClick={this.props.backgroundClick}></div>
-        <div className={"content"} style={this._imagesExists() || this._hasVideo() ? {} : {top: "15%"}}>
-          <div className={"close"} onClick={this.props.backgroundClick}>X</div>
+      <div className="modal active">
+        <div className="background" onClick={this.props.backgroundClick}></div>
+        <div className="content" style={this._imagesExists() || this._hasVideo() ? {} : {top: "15%"}}>
+          <div className="close" onClick={this.props.backgroundClick}>X</div>
           <header>
-            <h1 className={"modalTitle"}>{this.props.project.name}
-              <span className={"companyName"}>{" @" + this.props.project.company}</span>
+            <h1 className="modalTitle">{this.props.project.name}
+              <span className="companyName">{" @" + this.props.project.company}</span>
             </h1>
-            <p className={"modalSubtitle"}>Roles: {this.props.project.roles.join(', ')}.</p>
-            <ul className={"tags"}>{this.renderTags()}</ul>
-            <p className={"description"}>{this.props.project.description}</p>
+            <p className="modalSubtitle">Roles: {this.props.project.roles.join(', ')}.</p>
+            <ul className="tags">{this.renderTags()}</ul>
+            <p className="description">{this.props.project.description}</p>
           </header>
           {this.renderGallery()}
         </div>
@@ -80,13 +80,13 @@ var Modal = React.createClass({
       return (<ImageGallery
               items={this.renderImages()}/>);
     } else if(this._hasVideo()) {
-      return(<div className={"iframeWrapper"}>
+      return(<div className="iframeWrapper">
         <iframe src={this.props.project.video} width={'800px'} height={'400px'}></iframe>
       </div>);
     } else {
       return (
-        <h4 className={"link"}>
-          <a target={"_blank"} href={this.props.project.link}>{this.props.project.link}</a>
+        <h4 className="link">
+          <a target="_blank" href={this.props.project.link}>{this.props.project.link}</a>
         </h4>
       )
     }

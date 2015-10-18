@@ -7,8 +7,12 @@ var APP_PORT  = 3000;
 
 server.listen(APP_PORT);
 
-app.use(express.static('.'));
-app.get("/", function(req, res) {
+app.use(express.static(__dirname));
+app.set('views', __dirname);
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+
+app.get("/\/|about|contact/", function(req, res) {
   res.render("index.html")
 })
 
