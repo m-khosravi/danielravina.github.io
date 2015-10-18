@@ -3,7 +3,8 @@ var ReactDom = require('react-dom');
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
-var App   = require('./App');
+var App   = require('./components/App');
+
 "use strict"
 
 // routes:
