@@ -19,7 +19,7 @@ footer a {
 }
 
 header#main a:hover {
-  color: rgb(65, 65, 65);
+  color: tomato;
 }
 
 header#main {
@@ -38,7 +38,8 @@ header#main h1 {
   font-size: 42px;
   text-align: center;
   margin-bottom: 10px;
-  cursor: default;
+  cursor: pointer;
+  color: #222;
   -webkit-user-select: none;
   user-select: none;
   line-height: 1.2;

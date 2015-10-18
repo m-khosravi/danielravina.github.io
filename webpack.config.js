@@ -1,6 +1,6 @@
 module.exports = {
   devtool: 'source-map',
-  entry: __dirname + "/src/js/index.js",
+  entry: __dirname + "/src/js/index.jsx",
   output: {
     path: __dirname + "/src/js",
     filename: "build.min.js",
