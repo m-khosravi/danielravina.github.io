@@ -8,12 +8,14 @@ ul {
 }
 a {
   -webkit-transition: color .4s ease;
-  text-decoration: none;
+  text-decoration: underline;
   color: rgb(175, 175, 175);
 }
-footer a {
-  text-decoration: underline;
+
+header#main a {
+  text-decoration: none;
 }
+
 .center {
   text-align: center;
 }
