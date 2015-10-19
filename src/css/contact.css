@@ -11,10 +11,7 @@
   font-size: 31px;
   margin-left: 14px;
 }
-.social-icons img{
-  /*width: auto;*/
-  /*height: 25px;*/
-}
+
 
 #contact h3 {
   display: inline-block;
@@ -22,21 +19,21 @@
 
 }
 
-#contact .icon {
+#contact .fa {
   transition: color .5s ease;
 }
 
-#contact .icon:hover {
+#contact .fa:hover {
   color: tomato;
 }
-.icon-twitter-square {
+.fa-twitter-square {
   color: #4E98D5;
 }
 
-.icon-github-square {
+.fa-github-square {
   color: #222;
 }
 
-.icon-linkedin-square {
+.fa-linkedin-square {
   color: #0D6BA2;
 }

@@ -4,7 +4,6 @@ var ReactRouter = require('react-router');
 var Router      = ReactRouter.Router;
 var Route       = ReactRouter.Route;
 var IndexRoute  = ReactRouter.IndexRoute;
-"use strict"
 
 // routes:
 var Home    = require("./components/Home/Home"),

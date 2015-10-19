@@ -3,7 +3,6 @@ var React                   = require('react');
 var Project                 = require('./Project');
 var Grid                    = require('./Grid');
 var Modal                   = require('./Modal');
-var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var Home = React.createClass({
 
