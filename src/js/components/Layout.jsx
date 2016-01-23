@@ -2,6 +2,15 @@ var React                   = require('react');
 var ReactRouter             = require('react-router');
 var Link                    = ReactRouter.Link;
 var Layout = React.createClass({
+
+  componentDidMount: function() {
+    var typer = this.refs.typer
+    $(typer).typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+      });
+  },
+
   render: function() {
     return (
       <div>
@@ -9,6 +18,7 @@ var Layout = React.createClass({
           <div className="wrapper">
             <Link to="">
               <h1 id="logo"><span>D</span>aniel <span className="mirror">R</span>avina</h1>
+              <p ref="typer" id="typer"></p>
             </Link>
             <ul>
               <li><Link to="">home</Link></li>
@@ -17,14 +27,6 @@ var Layout = React.createClass({
             </ul>
           </div>
         </header>
-        <div className="wrapper">
-          {this.props.children}
-        </div>
-        <footer id="main">
-          <p>
-            <a target="_blank" href="https://github.com/danielravina/danielravina.github.io">Built</a> and designed by <Link to="/about">me</Link> <br />
-            using <img src="src/images/icons/react.png" id="react-icon" /><a target="_blank" href="https://facebook.github.io/react/">React.js</a></p>
-        </footer>
       </div>
     );
   }

@@ -1,4 +1,3 @@
-var $                       = require('jquery');
 var React                   = require('react');
 var Project                 = require('./Project');
 var Grid                    = require('./Grid');
