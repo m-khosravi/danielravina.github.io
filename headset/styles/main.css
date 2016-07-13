@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@font-face {
+  font-family: PaloAlto;
+  src: url('../fonts/Palo_Alto_Regular.ttf') format('truetype');
+}
+
+body {
+  background: #eeeeee;
+}
+
+.download-btn {
+  -webkit-appearance: none;
+  font-size: 24px;
+  border: none;
+  padding: 13px 25px;
+  margin-top: 33px;
+  border-radius: 3px;
+  background: rgb(42, 224, 140);
+  color: white;
+  font-weight: 300;
+  outline: none;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.download-btn:hover {
+  background: rgb(32, 167, 105);
+}
+
+#landing {
+  position: absolute;
+  animation-delay: 4s;
+  animation: show 1s;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #505050;
+}
+.material-icons {
+  color: #00BCD4;
+  font-size: 100px;
+  transform: rotate(-25deg);
+  position: relative;
+  top: 8px;
+}
+h1 {
+  line-height: 0.7;
+  font-size: 80px;
+  font-family: PaloAlto;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  font-family: PaloAlto;
+  color: #0663c4;
+  text-decoration: none;
+  font-size: 12px;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
