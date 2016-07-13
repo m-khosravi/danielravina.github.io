@@ -11,7 +11,7 @@
     <i class="material-icons">headset</i>
     <h1>headset</h1>
     <p>just listen</p>
-    <a id="download-btn" href="" onClick="handleOutboundLinkClicks()">Download for Mac (Beta)</a>
+    <a id="download-btn" href="">Download for Mac (Beta)</a>
 
     <a class='link' target="_blank" href="https://github.com/danielravina/headset">view on github</a>
   </div>
@@ -24,6 +24,10 @@
 
     ga('create', 'UA-80653103-2', 'auto');
     ga('send', 'pageview');
+
+    var downloadBtn = document.getElementById('download-btn')
+
+    downloadBtn.addEventListener('click', handleOutboundLinkClicks)
 
     function handleOutboundLinkClicks(event) {
       ga('send', 'event', {
