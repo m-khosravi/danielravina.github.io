@@ -11,9 +11,9 @@
     <i class="material-icons">headset</i>
     <h1>headset</h1>
     <p>just listen</p>
-    <button class="download-btn">Download for Mac (Beta)</button>
+    <a id="download-btn" href="" onClick="handleOutboundLinkClicks()">Download for Mac (Beta)</a>
 
-    <a target="_blank" href="https://github.com/danielravina/headset">view on github</a>
+    <a class='link' target="_blank" href="https://github.com/danielravina/headset">view on github</a>
   </div>
 
   <script>
@@ -21,9 +21,17 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
+
     ga('create', 'UA-80653103-2', 'auto');
     ga('send', 'pageview');
+
+    function handleOutboundLinkClicks(event) {
+      ga('send', 'event', {
+        eventCategory: 'Outbound Link',
+        eventAction: 'click',
+        eventLabel: event.target.href
+      });
+    }
   </script>
 </body>
 </html>

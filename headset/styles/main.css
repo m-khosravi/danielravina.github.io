@@ -9,8 +9,13 @@ body {
   background: #eeeeee;
 }
 
-.download-btn {
-  -webkit-appearance: none;
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+  display: block;
+}
+
+#download-btn {
   font-size: 24px;
   border: none;
   padding: 13px 25px;
@@ -23,7 +28,8 @@ body {
   transition: all .3s ease;
   cursor: pointer;
 }
-.download-btn:hover {
+
+#download-btn:hover {
   background: rgb(32, 167, 105);
 }
 
@@ -50,7 +56,7 @@ h1 {
   font-family: PaloAlto;
 }
 
-a {
+a.link {
   display: block;
   margin-top: 10px;
   font-family: PaloAlto;
@@ -59,7 +65,7 @@ a {
   font-size: 13px;
 }
 
-a:hover {
+a.link:hover {
   text-decoration: underline;
 }
 
