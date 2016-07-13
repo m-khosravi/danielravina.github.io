@@ -58,6 +58,11 @@ a {
   text-decoration: none;
   font-size: 12px;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
 @keyframes show {
   from {
     opacity: 0;
