@@ -30,11 +30,7 @@
     downloadBtn.addEventListener('click', handleOutboundLinkClicks)
 
     function handleOutboundLinkClicks(event) {
-      ga('send', 'event', {
-        eventCategory: 'Download',
-        eventAction: 'click',
-        eventLabel: event.target.href
-      });
+      ga('send', 'event', 'Download', 'click')
     }
   </script>
 </body>
