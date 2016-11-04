@@ -135,6 +135,24 @@
         ]
     },
     {
+      "name": "TrumpHush.com",
+      "description": "A Voice Recognition Software targeted spcifically for Donald Trump. ",
+      "tech": [
+          "Python",
+          "Flask",
+          "Machine Learning"
+      ],
+      "roles": [
+          "Everything"
+      ],
+      "link": "http://trumphush.com",
+      "company": "Side Project",
+      "thumb_img":"http://trumphush.com/static/images/logo128x128.png",
+      "images":[
+          "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/trumphush.png"
+      ]
+    },
+    {
         "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
         "description": "Front-desk kiosk that shows event schedules, touch enabled 3d map and the UBC campus map.",
         "tech": [
@@ -338,73 +356,6 @@
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/screen.jpg",
         "images":[
             "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_screencountry.jpg"
-        ]
-    },
-    {
-        "name": "Slack LunchBot",
-        "description": "A Slackbot that gives recommendations for potential lunch places around a chosen area using Yelp.",
-        "tech": [
-            "Node.js",
-            "ECMAScript 2015",
-            "Yelp API",
-            "AWS"
-        ],
-        "roles": ["Owner"],
-        "link": "https://github.com/danielravina/slack-lunch-bot",
-        "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/heisencat.png",
-        "images":[
-
-        ]
-    },
-    {
-        "name": "Beeper",
-        "description": "Scheduling platform for small businesses.",
-        "tech": [
-            "Rails",
-            "React",
-            "Webpack",
-            "Flux",
-            "React Native"
-        ],
-        "roles": ["Owner"],
-        "link": "https://github.com/danielravina/beeper",
-        "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/github.jpg",
-        "images":[
-
-        ]
-    },
-    {
-        "name": "static_search",
-        "description": "a Rails plug-in that allows you to index static HTML pages and makes them search-able. Was built as a part of the CiscoGSX Project.",
-        "tech": [
-            "Ruby",
-            "Nokogiri",
-            "ActiveRecord"
-        ],
-        "roles": ["Owner"],
-        "link": "https://rubygems.org/gems/static_search/",
-        "company": "Open Source",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/ironcat.png",
-        "images":[
-
-        ]
-    },
-    {
-        "name": "Thinkubator",
-        "description": "A prototype Samsung Smart TV application to display images from Dropbox in a gallery sideshow.",
-        "tech": [
-            "Socket.io",
-            "Samsung SmartTV SDK",
-            "Dropbox API"
-        ],
-        "roles": ["Owner"],
-        "link": "https://github.com/danielravina/thinkubator",
-        "company": "Open Source",
-        "thumb_img":"https://s-media-cache-ak0.pinimg.com/736x/16/64/c5/1664c50e43535640ec7cc40d49b0b017.jpg",
-        "images":[
-
         ]
     }
 ]

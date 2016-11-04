@@ -8,7 +8,6 @@ ul {
 }
 a {
   -webkit-transition: color .4s ease;
-  text-decoration: underline;
   color: rgb(175, 175, 175);
 }
 
