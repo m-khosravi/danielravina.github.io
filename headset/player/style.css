@@ -26,6 +26,7 @@ p {
 }
 
 .player-wrapper {
+  position: relative;
   text-align: center;
   margin-top: 12px;
   margin-bottom: 12px;
