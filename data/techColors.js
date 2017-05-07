@@ -58,4 +58,6 @@ module.exports = {
  "Web Services"        :["#4A9DEF", ""],
  "Webpack"             :["#5A7ED3", "bright"],
  "Yelp API"            :["#BD1E16", "bright"],
+ "Electron"            :["#5A7ED3", ""],
+ "Redux"               :["#DA5C00", ""],
 }

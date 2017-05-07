@@ -22,8 +22,7 @@ var Layout = React.createClass({
         </div>
         <footer id="main">
           <p>
-            <a target="_blank" href="https://github.com/danielravina/danielravina.github.io">Built</a> and designed by <Link to="/about">me</Link> <br />
-            using <img src="src/images/icons/react.png" id="react-icon" /><a target="_blank" href="https://facebook.github.io/react/">React.js</a></p>
+            Built by <Link to="/about">me</Link> using <img src="src/images/icons/react.png" id="react-icon" /><a target="_blank" href="https://facebook.github.io/react/">React.js</a></p>
         </footer>
       </div>
     );

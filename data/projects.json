@@ -1,5 +1,25 @@
 [
     {
+      "name": "Headset Music Player",
+      "description": "Discover, collect and listen to music from YouTube",
+      "tech": [
+          "Electron",
+          "React",
+          "Redux"
+      ],
+      "roles": [
+        "Product, marketing, developemt"
+      ],
+      "link": "http://headsetapp.co",
+      "company": "Side Project",
+      "thumb_img":"https://github.com/headsetapp/headset-electron/raw/master/Icon.png",
+      "images":[
+          "https://ph-files.imgix.net/fe3bea31-a7e0-4bde-a69e-dad61eb8e10c",
+          "https://ph-files.imgix.net/be4faf89-c284-4141-bb65-3827faef1731",
+          "https://ph-files.imgix.net/09094be5-f707-4d71-aa56-8e4b7e1dfa86"
+      ]
+    },
+    {
         "name": "Special Occasion Licences Online (SOLO)",
         "description": "An online liquor licensing system for public and private events, operated by the BC government.",
         "tech": [
@@ -135,24 +155,6 @@
         ]
     },
     {
-      "name": "TrumpHush.com",
-      "description": "A Voice Recognition Software targeted spcifically for Donald Trump. ",
-      "tech": [
-          "Python",
-          "Flask",
-          "Machine Learning"
-      ],
-      "roles": [
-          "Everything"
-      ],
-      "link": "http://trumphush.com",
-      "company": "Side Project",
-      "thumb_img":"http://trumphush.com/static/images/logo128x128.png",
-      "images":[
-          "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/trumphush.png"
-      ]
-    },
-    {
         "name": "UBC Robert H. Lee Alumni Centre - Wayfinding Kiosk",
         "description": "Front-desk kiosk that shows event schedules, touch enabled 3d map and the UBC campus map.",
         "tech": [
@@ -266,96 +268,6 @@
         "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/ih.jpg",
         "images":[
             "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_inputhealth.jpg"
-        ]
-    },
-    {
-        "name": "Project eMAR",
-        "description": "A mobile app that manages medication administrations in nursing homes.",
-        "tech": [
-            "Rails",
-            "PhoneGap",
-            "localStorage",
-            "Backbone",
-            "MS SQL Server",
-            "PostgreSQL",
-            "RESTful API"
-        ],
-        "roles": [
-            "Lead Dev",
-            "Backend",
-            "UI/UX Design",
-            "Frontend",
-            "Legacy System Integrations"
-        ],
-        "link": "",
-        "company": "Healthism",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/emar.jpg",
-        "images":[
-            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_emar.jpg"
-        ]
-    },
-    {
-        "name": "BCHydro Mobile Inspection Platform",
-        "description": "Monitoring, asset management and a fully featured field inspection system.",
-        "tech": [
-            "Rails",
-            "PhoneGap",
-            "localStorage",
-            "Backbone",
-            "HTML5 Geolocation",
-            "RESTful API",
-            "ActiveRecord"
-        ],
-        "roles": [
-            "Lead Dev",
-            "Backend",
-            "UI/UX Design",
-            "Frontend",
-            "Legacy System Integrations"
-        ],
-        "link": "",
-        "company": "Healthism",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/hydro.jpg",
-        "images":[
-
-        ]
-    },
-    {
-        "name": "VancouverLaptop.com",
-        "description": "The Point of Sale software and public e-commerce website which distributes new and used laptops across the lower mainland.",
-        "tech": [
-            "PHP",
-            "MySQL",
-            "jQuery"
-        ],
-        "roles": [
-            "Backend",
-            "QA"
-        ],
-        "link": "http://vancouverlaptop.com/",
-        "company": "Vancouver Laptop",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/laptop.jpg",
-        "images":[
-            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/laptop.jpg"
-        ]
-    },
-    {
-        "name": "ScreenCountry.com / LaptopScreen.com",
-        "description": "LCD screens marketplace, video tutorials and much more.",
-        "tech": [
-            "PHP",
-            "MySQL",
-            "jQuery"
-        ],
-        "roles": [
-            "Backend",
-            "QA"
-        ],
-        "link": "http://www.screencountry.com/",
-        "company": "Vancouver Laptop",
-        "thumb_img":"https://s3-us-west-2.amazonaws.com/danielravina-portfolio/thumbs/screen.jpg",
-        "images":[
-            "https://s3-us-west-2.amazonaws.com/danielravina-portfolio/projects/_screencountry.jpg"
         ]
     }
 ]
